@@ -46,6 +46,7 @@
 		<unit-tests.skip>false</unit-tests.skip>
 		<!--  Integration Test Skip -->
 		<integration-tests.skip>true</integration-tests.skip>
+		<jaxb2-maven-plugin.version>1.6</jaxb2-maven-plugin.version>
 	</properties>
 
 	<dependencies>
@@ -67,9 +68,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		<!-- WSDL4J -->
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
 		</dependency>
 
 		<dependency>
@@ -267,6 +274,27 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+
+
+			<!-- JAXB -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>${jaxb2-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaDirectory>${project.basedir}/src/main/resources/soap</schemaDirectory>
+					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

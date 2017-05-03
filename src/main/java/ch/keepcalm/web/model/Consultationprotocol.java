@@ -1,4 +1,4 @@
-package ch.keepcalm.soap.model;
+package ch.keepcalm.web.model;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.NotBlank;

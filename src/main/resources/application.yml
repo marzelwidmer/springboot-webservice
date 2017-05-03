@@ -39,6 +39,8 @@ management:
   info:
      git:
        mode: full
+  security:
+    enabled: false
 
 ## Embedded Tomcat Stuff
 server:

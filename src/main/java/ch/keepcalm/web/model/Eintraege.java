@@ -1,4 +1,4 @@
-package ch.keepcalm.soap.model;
+package ch.keepcalm.web.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

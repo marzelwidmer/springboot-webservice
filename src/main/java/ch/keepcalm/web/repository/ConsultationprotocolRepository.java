@@ -1,6 +1,6 @@
-package ch.keepcalm.soap.repository;
+package ch.keepcalm.web.repository;
 
-import ch.keepcalm.soap.model.Consultationprotocol;
+import ch.keepcalm.web.model.Consultationprotocol;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
