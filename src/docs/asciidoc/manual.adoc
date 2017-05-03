@@ -1,0 +1,51 @@
+= {project-name} User Guide
+Marcel Widmer <marzelwidmer@gmail.com>
+:icons: font
+:toc: left
+:toclevels: 4
+:leveloffset: 1
+:sectlinks:
+:revnumber: {project-version}
+:revdate: {localdate}
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+ifndef::testdir[:testdir: ../../test/java]
+
+[[overview]]
+= Overview
+== Architecture
+[architecture]
+include::architecture.adoc[]
+
+
+[[overview-http-verbs]]
+== HTTP verbs
+include::http-verbs.adoc[]
+
+[[overview-http-status-codes]]
+== HTTP status codes
+include::http-status-codes.adoc[]
+
+
+[[releaseNotes]]
+= Release Notes
+include::releaseNotes.adoc[]
+
+
+[[installation]]
+= Installation
+include::installation.adoc[]
+
+
+
+
+
+== Attributes
+.Built-in
+asciidoctor-version:: {asciidoctor-version}
+safe-mode-name:: {safe-mode-name}
+docdir:: {docdir}
+docfile:: {docfile}
+imagesdir:: {imagesdir}
+sourcedir:: {sourcedir}
+testdir:: {testdir}

@@ -1,0 +1,50 @@
+
+:spring-boot-ref-guide: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/
+:spring-boot-ref-guide-executable-jar: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application-executable-jar
+
+
+== Build Application:
+ $ mvn package
+
+Copy the file {project-artifact-name}.jar anywhere on the server.
+The JAR already contains the configuration for all available environments.
+For further information please visit the  {spring-boot-ref-guide}[Spring Boot Reference Guide]
+
+== Start Application
+Start application in production environment on command line.
+
+    $ java -jar -Dspring.profiles.active=production order-service.jar
+
+For more information please visit the {spring-boot-ref-guide-executable-jar}[Spring Boot Reference Guide] for further information.
+There are additional Spring profiles available.
+
+== Profiles
+.Table -Dspring.profiles.active=
+
+.Profiles
+|===
+|Profile |Environment
+
+|default / local
+|localhost
+
+
+|integration
+|Integration
+
+
+|test
+|Test
+
+|preproduction
+|Preproduction
+
+
+|education
+|Education
+
+
+|production
+|Production
+|===
+

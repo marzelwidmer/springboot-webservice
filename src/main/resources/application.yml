@@ -1,0 +1,52 @@
+# Spring
+spring:
+  profiles:
+    active: local
+  messages:
+    basename: i18n/messages
+    cache-seconds: -1
+    encoding: UTF-8
+  application:
+    name: @project.name@
+
+# Endpoints
+endpoints:
+  shutdown:
+    enabled: false
+  health:
+    enabled: true
+    sensitive: false
+  logfile:
+    sensitive: false
+
+# Infos Build
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+# Logging
+logging:
+  path: /srv/webservice/log/
+
+# Management
+management:
+  address: ${server.address}
+  port: ${server.port}
+  context-path: /manage
+  info:
+     git:
+       mode: full
+
+## Embedded Tomcat Stuff
+server:
+ use-forward-headers: false
+ context-path: /
+ port: 8080
+ address: localhost
+ compression:
+   enabled: true
+   mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
