@@ -22,7 +22,6 @@ target
 
 /application/
 /bin/
-/global-groovy.log
 /log/spring.log*
 /rebel.xml
 /src/main/frontend/app/locales/translations.tsv

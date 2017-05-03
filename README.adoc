@@ -1,4 +1,4 @@
-order-server
+springboot-webservice
 =================
 
 :toc:
@@ -8,10 +8,10 @@ order-server
 
 // Need some preamble to get TOC:
 {empty}
-image:https://img.shields.io/travis/marzelwidmer/order-service.svg?style=flat-square["TravisCI", link="https://travis-ci.org/marzelwidmer/order-service"]
-image:https://circleci.com/gh/marzelwidmer/order-service.svg?style=shield&circle-token=:circle-token["CircleCI", link="https://circleci.com/gh/marzelwidmer/order-service"]
-image:https://api.codacy.com/project/badge/Grade/34093789c75a4b72891743de8715cc65["Codacy code quality", link="https://www.codacy.com/app/marzelwidmer/order-service?utm_source=github.com&utm_medium=referral&utm_content=marzelwidmer/order-service&utm_campaign=Badge_Grade"]
-image:https://api.codacy.com/project/badge/Coverage/34093789c75a4b72891743de8715cc65["Codacy code quality", link="https://www.codacy.com/app/marzelwidmer/order-service?utm_source=github.com&utm_medium=referral&utm_content=marzelwidmer/order-service&utm_campaign=Badge_Coverage"]
+//image:https://img.shields.io/travis/marzelwidmer/order-service.svg?style=flat-square["TravisCI", link="https://travis-ci.org/marzelwidmer/order-service"]
+//image:https://circleci.com/gh/marzelwidmer/order-service.svg?style=shield&circle-token=:circle-token["CircleCI", link="https://circleci.com/gh/marzelwidmer/order-service"]
+//image:https://api.codacy.com/project/badge/Grade/34093789c75a4b72891743de8715cc65["Codacy code quality", link="https://www.codacy.com/app/marzelwidmer/order-service?utm_source=github.com&utm_medium=referral&utm_content=marzelwidmer/order-service&utm_campaign=Badge_Grade"]
+//image:https://api.codacy.com/project/badge/Coverage/34093789c75a4b72891743de8715cc65["Codacy code quality", link="https://www.codacy.com/app/marzelwidmer/order-service?utm_source=github.com&utm_medium=referral&utm_content=marzelwidmer/order-service&utm_campaign=Badge_Coverage"]
 
 
 === Context
@@ -46,10 +46,10 @@ For further information please visit the  {spring-boot-ref-guide}[Spring Boot Re
 
 === Start Application
 ==== Default Profile
-Start application on command line. The _default_ profile supports a H2 datbase.
+Start application on command line.
 For more information please visit the {spring-boot-ref-guide-executable-jar}[Spring Boot Reference Guide] for further information.
 
-    $ java -jar -Dspring.profiles.active=production order-server.jar
+    $ java -jar -Dspring.profiles.active=production springboot-webserver.jar
 
 There are additional Spring profiles available.
 
