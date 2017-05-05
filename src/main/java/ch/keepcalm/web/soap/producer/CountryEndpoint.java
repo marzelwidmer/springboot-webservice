@@ -1,8 +1,8 @@
 package ch.keepcalm.web.soap.producer;
 
 import ch.keepcalm.web.soap.repository.CountryRepository;
-import ch.keepcalm.web.soap.service.GetCountryRequest;
-import ch.keepcalm.web.soap.service.GetCountryResponse;
+import ch.keepcalm.ws.country.domain.GetCountryRequest;
+import ch.keepcalm.ws.country.domain.GetCountryResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -14,7 +14,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
  */
 @Endpoint
 public class CountryEndpoint {
-    private static final String NAMESPACE_URI = "http://keepcalm.ch/web/soap/service";
+    private static final String NAMESPACE_URI = "http://keepcalm.ch/ws/country/domain";
 
     private CountryRepository countryRepository;
 

@@ -1,5 +1,5 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:gs="http://keepcalm.ch/web/soap/service">
+                  xmlns:gs="http://keepcalm.ch/ws/country/domain">
     <soapenv:Header/>
     <soapenv:Body>
         <gs:getCountryRequest>
@@ -7,3 +7,4 @@
         </gs:getCountryRequest>
     </soapenv:Body>
 </soapenv:Envelope>
+

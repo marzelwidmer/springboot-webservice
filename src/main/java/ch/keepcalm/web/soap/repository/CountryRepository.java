@@ -1,7 +1,7 @@
 package ch.keepcalm.web.soap.repository;
 
-import ch.keepcalm.web.soap.service.Country;
-import ch.keepcalm.web.soap.service.Currency;
+import ch.keepcalm.ws.country.domain.Country;
+import ch.keepcalm.ws.country.domain.Currency;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
