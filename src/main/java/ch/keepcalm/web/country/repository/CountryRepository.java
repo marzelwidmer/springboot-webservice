@@ -1,7 +1,7 @@
-package ch.keepcalm.web.soap.repository;
+package ch.keepcalm.web.country.repository;
 
-import ch.keepcalm.ws.country.domain.Country;
-import ch.keepcalm.ws.country.domain.Currency;
+import ch.keepcalm.web.country.domain.Country;
+import ch.keepcalm.web.country.domain.Currency;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
@@ -18,6 +18,15 @@ public class CountryRepository {
 
     @PostConstruct
     public void initData() {
+
+        Country switzerland = new Country();
+        switzerland.setName("Switzerland");
+        switzerland.setCapital("Bern");
+        switzerland.setCurrency(Currency.CHF);
+        switzerland.setPopulation(8280000);
+
+        countries.put(switzerland.getName(), switzerland);
+
         Country spain = new Country();
         spain.setName("Spain");
         spain.setCapital("Madrid");

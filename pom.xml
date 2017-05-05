@@ -291,7 +291,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<schemaDirectory>${project.basedir}/src/main/resources/soap</schemaDirectory>
+					<schemaDirectory>src/main/resources/ws</schemaDirectory>
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>

@@ -1,4 +1,4 @@
-package ch.keepcalm.web.soap.config;
+package ch.keepcalm.web.infrastructure.config;
 
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -31,14 +31,14 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("CountriesPort");
-        wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace("http://keepcalm.ch/ws/country/domain");
+        wsdl11Definition.setLocationUri("/ws/country");
+        wsdl11Definition.setTargetNamespace("http://keepcalm.ch/web/country/domain");
         wsdl11Definition.setSchema(countriesSchema);
         return wsdl11Definition;
     }
 
     @Bean
     public XsdSchema countriesSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("soap/countries.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("ws/countries.xsd"));
     }
 }
