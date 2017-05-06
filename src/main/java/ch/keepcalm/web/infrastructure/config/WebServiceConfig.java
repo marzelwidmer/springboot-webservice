@@ -32,7 +32,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("CountriesPort");
         wsdl11Definition.setLocationUri("/ws/country");
-        wsdl11Definition.setTargetNamespace("http://keepcalm.ch/web/country/domain");
+        wsdl11Definition.setTargetNamespace("http://keepcalm.ch/web/country/ws");
         wsdl11Definition.setSchema(countriesSchema);
         return wsdl11Definition;
     }
