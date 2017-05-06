@@ -41,12 +41,11 @@ springboot-webservice
 
 = Sample Requests
 == SOAP
-
-    `curl -X POST \
+    curl -X POST \
       http://localhost:8080/ws/country \
       -H 'cache-control: no-cache' \
       -H 'content-type: text/xml' \
-      -H 'postman-token: 4e0e65c6-dac5-6c4e-080c-42c3048a9fb7' \
+      -H 'postman-token: 1906fe1e-2b9a-6449-5441-ea949a4a328d' \
       -d '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                       xmlns:gs="http://keepcalm.ch/web/country/ws">
         <soapenv:Header/>
@@ -55,7 +54,7 @@ springboot-webservice
                 <gs:name>Switzerland</gs:name>
             </gs:getCountryRequest>
         </soapenv:Body>
-    </soapenv:Envelope>'`
+    </soapenv:Envelope>'
 
 
 == Rest
