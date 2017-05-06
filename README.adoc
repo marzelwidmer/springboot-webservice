@@ -14,7 +14,7 @@ springboot-webservice
 :spring-boot-ref-guide-executable-jar: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application-executable-jar
  
 
-==== SOAP Debug VM-Argument
+=== SOAP Debug VM-Argument
     -Dcom.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump=true
     -Dcom.sun.xml.ws.transport.http.client.HttpTransportPipe.dump=true
     -Dcom.sun.xml.ws.transport.local.LocalTransportPipe.dump=true
@@ -30,7 +30,7 @@ springboot-webservice
 
 
 
-=== Context
+= Context
 [ditaa, "context-diagram"]
 ....
 +--------------+   HTTP(S)    +---------+
@@ -45,4 +45,27 @@ springboot-webservice
                                +----------+
 
 ....
+
+
+= Sample Requests
+== SOAP
+
+    `curl -X POST \
+      http://localhost:8080/ws/country \
+      -H 'cache-control: no-cache' \
+      -H 'content-type: text/xml' \
+      -H 'postman-token: 4e0e65c6-dac5-6c4e-080c-42c3048a9fb7' \
+      -d '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                      xmlns:gs="http://keepcalm.ch/web/country/ws">
+        <soapenv:Header/>
+        <soapenv:Body>
+            <gs:getCountryRequest>
+                <gs:name>Switzerland</gs:name>
+            </gs:getCountryRequest>
+        </soapenv:Body>
+    </soapenv:Envelope>'`
+
+
+== Rest
+    curl -X GET  http://localhost:8080/api/country/Switzerland
 
