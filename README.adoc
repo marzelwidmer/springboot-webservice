@@ -1,17 +1,33 @@
 springboot-webservice
-=====================
+=======================
 
 :toc:
 :toc-placement: preamble
 :toclevels: 1
-:project-artifact-name: order-service
+:project-artifact-name: price-service
+ 
 
-// Need some preamble to get TOC:
-{empty}
-//image:https://img.shields.io/travis/marzelwidmer/order-service.svg?style=flat-square["TravisCI", link="https://travis-ci.org/marzelwidmer/order-service"]
-//image:https://circleci.com/gh/marzelwidmer/order-service.svg?style=shield&circle-token=:circle-token["CircleCI", link="https://circleci.com/gh/marzelwidmer/order-service"]
-//image:https://api.codacy.com/project/badge/Grade/34093789c75a4b72891743de8715cc65["Codacy code quality", link="https://www.codacy.com/app/marzelwidmer/order-service?utm_source=github.com&utm_medium=referral&utm_content=marzelwidmer/order-service&utm_campaign=Badge_Grade"]
-//image:https://api.codacy.com/project/badge/Coverage/34093789c75a4b72891743de8715cc65["Codacy code quality", link="https://www.codacy.com/app/marzelwidmer/order-service?utm_source=github.com&utm_medium=referral&utm_content=marzelwidmer/order-service&utm_campaign=Badge_Coverage"]
+[installation]
+== Installation
+
+:spring-boot-ref-guide: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/
+:spring-boot-ref-guide-executable-jar: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application-executable-jar
+ 
+
+==== SOAP Debug VM-Argument
+    -Dcom.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump=true
+    -Dcom.sun.xml.ws.transport.http.client.HttpTransportPipe.dump=true
+    -Dcom.sun.xml.ws.transport.local.LocalTransportPipe.dump=true
+    -Dcom.sun.xml.ws.transport.http.HttpAdapter.dump=true
+    -Dcom.sun.xml.internal.ws.transport.http.HttpAdapter.dumpTreshold=10000
+
+
+
+ 
+
+
+
+
 
 
 === Context
@@ -28,48 +44,4 @@ springboot-webservice
                                |  MongoDB |
                                +----------+
 
-
-
-[installation]
-== Installation
-
-:spring-boot-ref-guide: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/
-:spring-boot-ref-guide-executable-jar: http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application-executable-jar
-
-
-=== Build Application:
- $ mvn package
-
-Copy the file {project-artifact-name}.jar anywhere on the server.
-The JAR already contains the configuration for all available environments.
-For further information please visit the  {spring-boot-ref-guide}[Spring Boot Reference Guide]
-
-=== Start Application
-==== Default Profile
-Start application on command line.
-For more information please visit the {spring-boot-ref-guide-executable-jar}[Spring Boot Reference Guide] for further information.
-
-    $ java -jar -Dspring.profiles.active=production springboot-webserver.jar
-
-There are additional Spring profiles available.
-
-==== Profiles
-.Table -Dspring.profiles.active=
-
-.Profiles
-|===
-|Profile |Environment
-
-|default
-|Development localhost
-
-|test
-|Test
-
-|preproduction
-|Preproduction
-
-|production
-|Production
-|===
-
+===
