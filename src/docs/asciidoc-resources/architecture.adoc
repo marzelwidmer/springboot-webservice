@@ -1,11 +1,10 @@
-=== Context
 [ditaa, "context-diagram"]
 ....
 
 
-+--------------+   HTTP(S)    +---------+
++--------------+    HTTP      +---------+
 | Browser (SPA)|--------------| service |
-+--------------+    REST/SOAP +---------+
++--------------+  REST/SOAP   +---------+
                                     |
                                     |
                                     v JPA
