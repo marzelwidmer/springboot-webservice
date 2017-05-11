@@ -1,3 +1,4 @@
 # Logging
 logging:
   path: log/
+  level: error
