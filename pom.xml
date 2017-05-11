@@ -103,7 +103,7 @@
 		</dependency>
 	</dependencies>
 
-	<!-- Build -->
+
 	<!-- Build -->
 	<build>
 		<finalName>${project.name}-${project.version}</finalName>
@@ -291,7 +291,8 @@
 				</executions>
 				<configuration>
 					<schemaDirectory>src/main/resources/ws</schemaDirectory>
-					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<!--<outputDirectory>${project.basedir}/src/main/java</outputDirectory>-->
+					<outputDirectory>${project.build.directory}/generated-sources/java/</outputDirectory>
 					<clearOutputDir>false</clearOutputDir>
 				</configuration>
 			</plugin>
